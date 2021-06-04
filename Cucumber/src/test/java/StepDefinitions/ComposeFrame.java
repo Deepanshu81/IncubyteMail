@@ -21,7 +21,8 @@ public class ComposeFrame {
 
 	@Given("^Browser is open with Gmail Url$")
 	public void browser_is_open_with_gmail_url() throws Throwable {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Deepanshu\\Downloads\\Testing\\chromedriver.exe");
+		String dir = System.getProperty("user.dir");
+		System.setProperty("webdriver.chrome.driver", dir+"\\Resources\\chromedriver.exe");
 		driver = new ChromeDriver();
 		c = new pageObj(driver);
 		a = new Actions(driver);
